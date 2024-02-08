@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+</head>
+<body style="background-color: #111;" id="serv_num" >
+    <header>
+        <h1>Welcome to DREAM_SETUP srore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="id1">
+        <h2>SETUP GAMER R5 5500-RX 580 + MONITEUR GAMER + PACK GAMER</h2>
+        <div class="idimg">    
+        <img class="imgs1" src="Setup-Gamer-SG-Lighning-Ryzen-5-5500-RX580-Setup-Game-300x300.jpg">
+             
+             <ul>
+                <li><span><strong>BOITIER :</strong></span>SG LIGHNING ARGB NOIR</li><br>
+                <li><span><strong>CARTE MERE :</strong></span> ASROCK A520M-HVS</li><br>
+                <li><span><strong>PROCESSEUR :</strong> </span>AMD Ryzen 5 5500 (3.6 GHz / 4.2 GHz)</li><br>
+                <li><span><strong>CARTE GRAPHIQUE :</strong></span> RADEON RX 580 8GB GDDR5 2048SP</li><br>
+                <li><span><strong>RAM : </strong></span>16GB ( 8GB x 2 ) 3200 Mhz DDR4 XPG GAMMIX D35 NOIR</li><br>
+                <li><span><strong>STOCKAGE SSD : </strong></span>256 Go</li><br>
+                <li><span><strong>PSU : </strong></span> MARS GAMING 550W 80PLUS BRONZE
+                    1AN GARANTIE</li>
+                    <br>
+                    <br>
+                    <button id="showFormBtn">Order Now</button>
+             </ul>
+            </div> 
+            </div>
+        
+            
+
+            <form id="orderForm" style="display: none;" action="confirmation-page.html" method="post">
+                <!-- Your other form fields -->
+                <label for="familyName">Family Name:</label>
+                <input type="text" id="familyName" name="familyName" required>
+                <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                <br>
+                <label for="address">Living Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+                <!-- Credit Card input with eye toggle --><br>
+                <label for="creditCard">Credit Card:</label>
+                <div class="credit-card-input">
+                    <input type="password" id="creditCard" name="creditCard" required>
+                    <span class="eye-icon" onclick="togglePassword('creditCard')">&#128065;</span>
+                </div>
+
+                <button type="submit" id="submitOrderBtn">Submit Order</button>
+            </form>
+        
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 DREAMSETUP. All your needs are here.</p>
+    </footer>
+    <script>
+        document.getElementById("showFormBtn").addEventListener("click", function () {
+            document.getElementById("orderForm").style.display = "block";
+        });
+
+        document.getElementById("orderForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            var familyName = document.getElementById("familyName").value;
+            var lastName = document.getElementById("lastName").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var address = document.getElementById("address").value;
+            var postalCode = document.getElementById("postalCode").value;
+            
+            // Store the values in localStorage for access on the confirmation page
+            localStorage.setItem("familyName", familyName);
+            localStorage.setItem("lastName", lastName);
+            localStorage.setItem("phoneNumber", phoneNumber);
+            localStorage.setItem("address", address);
+            localStorage.setItem("postalCode", postalCode);
+            
+             // Redirect to the confirmation page
+            // Get the text content of h2 and store it in a variable
+            var setupTitle = document.querySelector("h2").innerText;
+            
+            // Store the variable in localStorage for access on the confirmation page
+            localStorage.setItem("setupTitle", setupTitle);
+            
+            // Redirect to the confirmation page
+            window.location.href = "confirmation_page.html";
+        });
+
+        function togglePassword(inputId) {
+            var input = document.getElementById(inputId);
+            var eyeIcon = document.querySelector('.eye-icon');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                eyeIcon.innerHTML = '&#128064;'; // Closed eye icon
+            } else {
+                input.type = 'password';
+                eyeIcon.innerHTML = '&#128065;'; // Open eye icon
+            }
+        }
+    </script>
+</body>
+</html>

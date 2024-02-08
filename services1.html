@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                
+                var orderForm = document.getElementById('orderForm');
+    
+                orderForm.addEventListener('submit', function (event) {
+                    var familyNameInput = document.getElementById('familyName');
+                    var lastNameInput = document.getElementById('lastName');
+    
+                    if (!validateName(familyNameInput.value)) {
+                        alert('Please enter a valid Family Name with only letters.');
+                        event.preventDefault(); 
+                        return;
+                    }
+    
+                    if (!validateName(lastNameInput.value)) {
+                        alert('Please enter a valid Last Name with only letters.');
+                        event.preventDefault(); 
+                        return;
+                    }
+                    var phoneNumberInput = document.getElementById('phoneNumber');
+                    if (!validatePhoneNumber(phoneNumberInput.value)) {
+                        alert('Please enter a valid Phone Number with only numbers.');
+                        event.preventDefault();
+                        return;
+                    }
+                    var addressInput = document.getElementById('address');
+                    if (!validateAddress(addressInput.value)) {
+                        alert('Please enter a valid Address.');
+                        event.preventDefault();
+                        return;
+                    }
+                });
+                function validateName(name) {
+                    var nameRegex = /^[A-Za-z]+$/;
+                    return nameRegex.test(name);
+                }
+                function validatePhoneNumber(phoneNumber) {
+                    var phoneRegex = /^[0-9]+$/;
+                    return phoneRegex.test(phoneNumber);
+                }
+                function validateAddress(address) {
+                    return address.trim() !== '';
+                }
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>
+</head>
+<body style="background-color: #111;" id="serv_num" >
+    <header>
+        <h1>Welcome to DREAM_SETUP srore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="id1">
+        <h2>SETUP GAMER R7 5700X-RTX 3060Ti + MONITEUR GAMER + PACK GAMER</h2>
+        <div class="idimg">    
+        <img   src="SG-GLASSPRO-5700X-RTX-3060Ti-Maroc-Setup-Game.jpg">
+             <ul>
+                <li><span><strong>BOITIER :</strong></span>SG GLASSPRO ARGB NOIR</li><br>
+                <li><span><strong>CARTE MERE :</strong></span> GIGABYTE B550M AORUS ELITE</li><br>
+                <li><span><strong>PROCESSEUR :</strong> </span>AMD Ryzen 7 5700X (3.4 GHZ / 4.6 GHZ) BOX</li><br>
+                <li><span><strong>GEFORCE RTX 3060TI 8Go GDDR6</li><br>
+                <li><span><strong>RAM : </strong></span>16GB ( 8GB x 2 ) 3200 Mhz DDR4 XPG GAMMIX D35 NOIR</li><br>
+                <li><span><strong>STOCKAGE SSD : </strong></span>SG MP100 2.5″ SATA 3 SSD 512GB</li><br>
+                <li><span><strong>WATERCOOLER : </strong></span>SG 240ML-2 ARGB NOIR</li><br>
+                <li><span><strong>PSU : </strong></span>AEROCOOL LUX 750W 80 PLUS BRONZE</li>
+                <br>
+                <br>
+                <button id="showFormBtn">Order Now</button>
+            </ul>
+            </div> 
+            </div>
+            <form id="orderForm" style="display: none;" action="confirmation-page.html" method="post">
+                <label for="familyName">Family Name:</label>
+                <input type="text" id="familyName" name="familyName" required>
+                
+                <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                <br>
+                <label for="address">Living Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+                <br>
+                <label for="creditCard">Credit Card:</label>
+                <div class="credit-card-input">
+                    <input type="password" id="creditCard" name="creditCard" required>
+                    <span class="eye-icon" onclick="togglePassword('creditCard')">&#128065;</span>
+                </div>
+                <br>
+                <button type="submit" id="submitOrderBtn">Submit Order</button>
+            </form>
+            <br>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 DREAMSETUP. All your needs are here.</p>
+    </footer>
+
+    <script>
+        document.getElementById("showFormBtn").addEventListener("click", function () {
+            document.getElementById("orderForm").style.display = "block";
+        });
+
+        document.getElementById("orderForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            var familyName = document.getElementById("familyName").value;
+            var lastName = document.getElementById("lastName").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var address = document.getElementById("address").value;
+            var postalCode = document.getElementById("postalCode").value;
+            var imagePath = "SG-GLASSPRO-5700X-RTX-3060Ti-Maroc-Setup-Game.jpg";
+            
+            localStorage.setItem("familyName", familyName);
+            localStorage.setItem("lastName", lastName);
+            localStorage.setItem("phoneNumber", phoneNumber);
+            localStorage.setItem("address", address);
+            localStorage.setItem("postalCode", postalCode);
+            localStorage.setItem("imagePath", imagePath);
+            
+            var setupTitle = document.querySelector("h2").innerText;
+            
+            
+            localStorage.setItem("setupTitle", setupTitle);
+            
+            
+            window.location.href = "confirmation_page.html";
+        });
+
+        function togglePassword(inputId) {
+            var input = document.getElementById(inputId);
+            var eyeIcon = document.querySelector('.eye-icon');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                eyeIcon.innerHTML = '&#128064;'; 
+            } else {
+                input.type = 'password';
+                eyeIcon.innerHTML = '&#128065;'; 
+            }
+        }
+    </script>
+
+
+</body>
+</html>

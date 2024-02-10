@@ -1,81 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Website - Order Confirmation</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-</head>
-<body style="background-color: #111;" id="serv_numc">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+  </head>
+  <body style="background-color: #111" id="serv_numc">
     <header>
-        <h1>Welcome to DREAM_SETUP srore</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Welcome to DREAM_SETUP srore</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="id1">
-    <h1>Order Confirmation</h1>
-    
-    
-    <div class="gift-container">
+      <h1>Order Confirmation</h1>
+
+      <div class="gift-container">
         <h3><strong>Your order is confirmed.</strong></h3>
-        <img class="gft" src="download-removebg-preview (3).png" alt="Gift Logo">
+        <img
+          class="gft"
+          src="../assets/download-removebg-preview (3).png"
+          alt="Gift Logo"
+        />
+      </div>
+
+      <h3><strong id="setupTitle"></strong></h3>
+      <img id="confirmation-image" alt="Gaming Setup" />
+
+      <p>
+        Hi <span id="customerName"></span>, we are happy to tell you that your
+        order will be delivered to <span id="customerAddress"></span> in two
+        weeks.
+      </p>
     </div>
-    
-    
-        <h3><strong id="setupTitle"></strong></h3>
-        <img id="confirmation-image" alt="Gaming Setup">
-    
-    
-    
 
-    
-    <p>Hi <span id="customerName"></span>, we are happy to tell you that your order will be delivered to <span id="customerAddress"></span> in two weeks.</p>
-    </div>
-
-
-    
-<div class="id1">
-    
-    <div class="image-container3">
+    <div class="id1">
+      <div class="image-container3">
         <div class="stc">
-        <img  src="_db481a41-4ede-44c0-839a-63e76dda62ac.jpg" alt="Image 1">
-        <img  src="_57d17f4e-68ce-45b2-b171-9bb119d278ce.jpg" alt="Image 2">
+          <img
+            src="../assets/_db481a41-4ede-44c0-839a-63e76dda62ac.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="../assets/_57d17f4e-68ce-45b2-b171-9bb119d278ce.jpg"
+            alt="Image 2"
+          />
+        </div>
+        <div class="stc">
+          <img
+            src="../assets/_e8b23197-04a6-4d3f-9fe2-42a4126d9f0e.jpg"
+            alt="Image 3"
+          />
+          <img
+            src="../assets/_0ae4d8a0-51f8-4935-b9da-3867ca8bbdcc.jpg"
+            alt="Image 4"
+          />
+        </div>
+      </div>
     </div>
-    <div class="stc">
-        <img  src="_e8b23197-04a6-4d3f-9fe2-42a4126d9f0e.jpg"alt="Image 3">
-        <img  src="_0ae4d8a0-51f8-4935-b9da-3867ca8bbdcc.jpg" alt="Image 4">
-    </div>    
-        
+    <div class="gift-container">
+      <h3>
+        <strong
+          >This stickers will be delivered with your order. It's just a little
+          gift.</strong
+        >
+      </h3>
+      <img
+        class="gft"
+        src="../assets/download-removebg-preview (2).png"
+        alt="Gift Logo"
+      />
     </div>
-</div>
-<div class="gift-container">
-    <h3><strong>This stickers will be delivered with your order. It's just a little gift.</strong></h3>
-    <img class="gft" src="download-removebg-preview (2).png" alt="Gift Logo">
-</div>
 
     <footer>
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
     </footer>
 
     <script>
-   
-        var setupTitle = localStorage.getItem("setupTitle");
-        var familyName = localStorage.getItem("familyName");
-        var lastName = localStorage.getItem("lastName");
-        var address = localStorage.getItem("address");
-        var imagePath = localStorage.getItem("imagePath");
-        
-        document.getElementById("setupTitle").innerText = setupTitle;
-        document.getElementById("customerName").innerText = familyName + " " + lastName;
-        document.getElementById("customerAddress").innerText = address;
-        document.getElementById("confirmation-image").src = imagePath;
+      var setupTitle = localStorage.getItem("setupTitle");
+      var familyName = localStorage.getItem("familyName");
+      var lastName = localStorage.getItem("lastName");
+      var address = localStorage.getItem("address");
+      var imagePath = localStorage.getItem("imagePath");
+
+      document.getElementById("setupTitle").innerText = setupTitle;
+      document.getElementById("customerName").innerText =
+        familyName + " " + lastName;
+      document.getElementById("customerAddress").innerText = address;
+      document.getElementById("confirmation-image").src = imagePath;
     </script>
-</body>
+  </body>
 </html>

@@ -5,8 +5,13 @@ function checkin(email, password) {
   if (emailRegex.test(email) && PasswordRegex.test(password)) {
     text = " Welcome !";
     document.getElementById("bemo").innerHTML = text;
-    window.location.href = "../index.html";
+    window.location.href = "../home/index.html";
     return true;
+  }
+  if (emailRegex.test(email === null) && PasswordRegex.test(passwor === null)) {
+    text = "please enter an email and password";
+    document.getElementById("bemo").innerHTML = text;
+    return false;
   } else {
     text = "please enter a valid email and password";
     document.getElementById("bemo").innerHTML = text;

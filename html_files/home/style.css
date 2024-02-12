@@ -108,3 +108,24 @@ footer {
   position: fixed;
   bottom: 0;
 }
+.vid-container {
+  display: flex;
+  width: 100%;
+  place-content: center;
+  margin-top: 70px;
+}
+
+.video1 {
+  width: 240px;
+  height: 440px;
+  border-radius: 10px;
+}
+
+.video1:hover {
+  cursor: pointer;
+  width: 270px;
+  height: 470px;
+  box-shadow: 0 0 10px rgba(219, 126, 19, 0.824);
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
+}

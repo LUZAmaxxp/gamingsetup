@@ -1,148 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website - Services</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-</head>
-<body id="services">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DREAMSETUP - Services</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #1e1f26;
+        color: white;
+      }
+
+      header h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+      }
+
+      header img {
+        height: 40px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #ff7f50;
+      }
+
+      section {
+        padding: 20px;
+        background-color: #30353b;
+      }
+
+      .image-container0 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .image-item {
+        background: rgb(247, 157, 12);
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .image-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .image-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .item-details {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .item-details p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #1e1f26;
+      }
+
+      .item-details button {
+        padding: 10px 20px;
+        background-color: #1e1f26;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+
+      .item-details button:hover {
+        background-color: #ff7f50;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #1e1f26;
+        color: white;
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        header h2 {
+          font-size: 16px;
+        }
+
+        nav ul {
+          gap: 10px;
+          font-size: 14px;
+        }
+
+        .item-details p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body id="services">
     <header>
-        <h2 class="hd2">DREAM_SETUP<img src="../assets/images-removebg-preview (1).png" alt="Shopping Cart"></h2>
-        <nav>
-            <ul>
-                <li><a href="home/index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <h2>
+        DREAM_SETUP
+        <img src="../assets/images-removebg-preview (1).png" alt="Logo" />
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="home/index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <section>
-        <div class="image-container0">
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/SG-GLASSPRO-5700X-RTX-3060Ti-Maroc-Setup-Game.jpg"alt="Service 1">
-                <div class="item-details">
-                    <p>Price: 12849 MAD</p>
-                    <button onclick="window.location.href='services1.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-SG-Lighning-Ryzen-5-5500-RX580-Setup-Game-300x300.jpg" alt="Service 2">
-                <div class="item-details">
-                    <p>Price: 5849 MAD</p>
-                    <button onclick="window.location.href='services2.html'">More info</button>
-                </div>
-            </div>
+      <div class="image-container0">
+        <div class="image-item">
+          <img
+            src="../assets/SG-GLASSPRO-5700X-RTX-3060Ti-Maroc-Setup-Game.jpg"
+            alt="Service 1"
+          />
+          <div class="item-details">
+            <p>Price: 12849 MAD</p>
+            <button onclick="window.location.href='services1.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-SG-DUOMECH-MINI-Ryzen-5-3600-1660Ti-Prix-Maroc.jpg" alt="Service 3">
-                <div class="item-details">
-                    <p>Price: 7599 MAD</p>
-                    <button onclick="window.location.href='services3.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-RYZEN-7-5800X-RTX-3080-Maroc.jpg" alt="Service 4">
-                <div class="item-details">
-                    <p>Price: 18799 MAD</p>
-                    <button onclick="window.location.href='services4.html'">More info</button>
-                </div>
-            </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-SG-Lighning-Ryzen-5-5500-RX580-Setup-Game-300x300.jpg"
+            alt="Service 2"
+          />
+          <div class="item-details">
+            <p>Price: 5849 MAD</p>
+            <button onclick="window.location.href='services2.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/SETUP-GAMER-R9-5950X-RTX-3080-Maroc-Setup-Game.jpg" alt="Service 5">
-                <div class="item-details">
-                    <p>Price: 31799 MAD</p>
-                    <button onclick="window.location.href='services5.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-r5-5500-rtx-3060-Prix-MAroc-300x300.jpg" alt="Service 6">
-                <div class="item-details">
-                    <p>Price: 7889 MAD</p>
-                    <button onclick="window.location.href='services6.html'">More info</button>
-                </div>
-            </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-SG-DUOMECH-MINI-Ryzen-5-3600-1660Ti-Prix-Maroc.jpg"
+            alt="Service 3"
+          />
+          <div class="item-details">
+            <p>Price: 7599 MAD</p>
+            <button onclick="window.location.href='services3.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/SETUP-GAMER-INTEL-CORE-i5-12400F-RTX-2060-SUPER-MONITEUR-GAMER-PACK-GAMER-300x300.jpg" alt="Service 7">
-                <div class="item-details">
-                    <p>Price: 9599 MAD</p>
-                    <button onclick="window.location.href='services7.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/SETUP-GAMER-DUOMECH-MINI-i5-11400F-GTX-1660ti-Setup-Game.jpg" alt="Service 8">
-                <div class="item-details">
-                    <p>Price: 8999 MAD</p>
-                    <button onclick="window.location.href='services8.html'">More info</button>
-                </div>
-            </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-RYZEN-7-5800X-RTX-3080-Maroc.jpg"
+            alt="Service 4"
+          />
+          <div class="item-details">
+            <p>Price: 18799 MAD</p>
+            <button onclick="window.location.href='services4.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/SETUP-GAMER-CORE-i5-11400F-GTX-1650-LIGHNING-Setup-Game.jpg" alt="Service 9">
-                <div class="item-details">
-                    <p>Price: 7699 MAD</p>
-                    <button onclick="window.location.href='services9.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-Casa-ryzen-5-5500-Gtx-1660-super-M100A-Setup-Game-Maroc-300x300.jpg" alt="Service 10">
-                <div class="item-details">
-                    <p>Price: 7199 MAD</p>
-                    <button onclick="window.location.href='services10.html'">More info</button>
-                </div>
-            </div>
+        <div class="image-item">
+          <img
+            src="../assets/SETUP-GAMER-R9-5950X-RTX-3080-Maroc-Setup-Game.jpg"
+            alt="Service 5"
+          />
+          <div class="item-details">
+            <p>Price: 31799 MAD</p>
+            <button onclick="window.location.href='services5.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-Casa-M100A-ryzen-5-3600-Gtx-1660-super-Maroc-Gaming-300x300.jpg" alt="Service 11">
-                <div class="item-details">
-                    <p>Price: 7299 MAD</p>
-                    <button onclick="window.location.href='services11.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-Casa-i5-11400F-RX-580-SG-LIGHNING-maroc.jpg" alt="Service 12">
-                <div class="item-details">
-                    <p>Price: 6949 MAD</p>
-                    <button onclick="window.location.href='services12.html'">More info</button>
-                </div>
-            </div>    
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-r5-5500-rtx-3060-Prix-MAroc-300x300.jpg"
+            alt="Service 6"
+          />
+          <div class="item-details">
+            <p>Price: 7889 MAD</p>
+            <button onclick="window.location.href='services6.html'">
+              More info
+            </button>
+          </div>
         </div>
-        <div class="image-row1">
-            <div class="image-item">
-                <img src="../assets/images.jpg" alt="Service 1">
-                <div class="item-details">
-                    <p>Price: 5799 MAD</p>
-                    <button onclick="window.location.href='services13.html'">More info</button>
-                </div>
-            </div>
-            <div class="image-item">
-                <img src="../assets/Setup-Gamer-R5-5600x-Rtx-3070Ti-Maroc.jpg" alt="Service 2">
-                <div class="item-details">
-                    <p>Price: 18399 MAD</p>
-                    <button onclick="window.location.href='services14.html'">More info</button>
-                </div>
-            </div>
+        <div class="image-item">
+          <img
+            src="../assets/SETUP-GAMER-INTEL-CORE-i5-12400F-RTX-2060-SUPER-MONITEUR-GAMER-PACK-GAMER-300x300.jpg"
+            alt="Service 7"
+          />
+          <div class="item-details">
+            <p>Price: 9599 MAD</p>
+            <button onclick="window.location.href='services7.html'">
+              More info
+            </button>
+          </div>
         </div>
-        
-    </div>
-</section>
-<!--aside>
-    <video width="200" height="200" controls muted>
-        <source src="Gaming_PC_Build_ASMR720P_60FPS.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</aside-->
-
-        <footer>@2023 DREAMSETUP. All your needs are here.</p>
-        </footer>
-    </body>
-    </html>
+        <div class="image-item">
+          <img
+            src="../assets/SETUP-GAMER-DUOMECH-MINI-i5-11400F-GTX-1660ti-Setup-Game.jpg"
+            alt="Service 8"
+          />
+          <div class="item-details">
+            <p>Price: 8999 MAD</p>
+            <button onclick="window.location.href='services8.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img
+            src="../assets/SETUP-GAMER-CORE-i5-11400F-GTX-1650-LIGHNING-Setup-Game.jpg"
+            alt="Service 9"
+          />
+          <div class="item-details">
+            <p>Price: 7699 MAD</p>
+            <button onclick="window.location.href='services9.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-Casa-ryzen-5-5500-Gtx-1660-super-M100A-Setup-Game-Maroc-300x300.jpg"
+            alt="Service 10"
+          />
+          <div class="item-details">
+            <p>Price: 7199 MAD</p>
+            <button onclick="window.location.href='services10.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-Casa-M100A-ryzen-5-3600-Gtx-1660-super-Maroc-Gaming-300x300.jpg"
+            alt="Service 11"
+          />
+          <div class="item-details">
+            <p>Price: 7299 MAD</p>
+            <button onclick="window.location.href='services11.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-Casa-i5-11400F-RX-580-SG-LIGHNING-maroc.jpg"
+            alt="Service 12"
+          />
+          <div class="item-details">
+            <p>Price: 6949 MAD</p>
+            <button onclick="window.location.href='services12.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img src="../assets/images.jpg" alt="Service 13" />
+          <div class="item-details">
+            <p>Price: 5799 MAD</p>
+            <button onclick="window.location.href='services13.html'">
+              More info
+            </button>
+          </div>
+        </div>
+        <div class="image-item">
+          <img
+            src="../assets/Setup-Gamer-R5-5600x-Rtx-3070Ti-Maroc.jpg"
+            alt="Service 14"
+          />
+          <div class="item-details">
+            <p>Price: 18399 MAD</p>
+            <button onclick="window.location.href='services14.html'">
+              More info
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>&copy; 2023 DREAMSETUP. All your needs are here.</footer>
+  </body>
+</html>
